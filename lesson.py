@@ -16,3 +16,7 @@ class Big(Car):
             print(f'Большая машина {self.name}')
     def info(self):
         return f'Машина {self.name} обьем двигателя: {self.engine}, год выпуска: {self.year}, максимальная скорость {self.maxspeed}'
+
+a = Car('bmw', 2.4, 1994 )
+print(a.info())
+
