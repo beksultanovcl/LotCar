@@ -8,5 +8,15 @@ class Car:
     def info(self):
         return f'Машина {self.name} обьем двигателя: {self.engine}, год выпуска: {self.year}, максимальная скорость {self.maxspeed}'
 
-a = Car('Mersedes', '5.5', 2024)
+class Big(Car):
+    def __init__(self, name, engine, year):
+        Car.__init__(self, name, engine, year)
+        self.maxspeed = 360
+        if self.engine >= 4.5:
+            print(f'Большая машина {self.name}')
+    def info(self):
+        return f'Машина {self.name} обьем двигателя: {self.engine}, год выпуска: {self.year}, максимальная скорость {self.maxspeed}'
+
+a = Car('bmw', 2.4, 1994 )
 print(a.info())
+
